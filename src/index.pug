@@ -1,0 +1,36 @@
+doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+html(xmlns="http://www.w3.org/1999/xhtml")
+include variables.pug
+include mixins.pug
+head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    <!--[if !mso]><!-->
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    <!--<![endif]-->
+    title #{title}
+body(style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;width:100% !important;height:100% !important;-webkit-font-smoothing:antialiased;line-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;")
+    table(id="backgroundTable" style="-webkit-font-smoothing:antialiased;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;width:100% !important;line-height:100% !important;")
+        tr
+            td(style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+                table(class="outer" border="0" cellspacing="0" cellpadding="0" width="600" role="presentation" style="-webkit-font-smoothing:antialiased;line-height:100%;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;mso-table-lspace:0pt;mso-table-rspace:0pt;Margin:0 auto;width:600px;")
+                    tr
+                        td(style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+                            div(class="preheader" style="-webkit-font-smoothing:antialiased;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;") #{preheader}
+                    include tamplate/header.pug
+                    include tamplate/header-nav.pug
+                    
+                    tr
+                        td(align="center" valign="middle" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+                            a(href="https://www.gold585.ru/catalog/" target="_blank" style="-webkit-font-smoothing:antialiased;line-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+                                img(class="imageFix" width="600" height="" border="0" src="http://www.gold585.ru/upload/mail/27-07-2018/mail_03.jpg" alt="ЗАЙДИ В МАГАЗИН НЕ ВЫХОДЯ ИЗ ДОМА" style="color:#ffffff;font-family:Verdana,sans-serif!important;font-size:20px;line-height:50px;-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+
+                    include tamplate/banner-top.pug
+
+                    tr
+                        td(width="100%" style="padding-bottom:30px;-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-right:0;padding-left:0;")
+                            table(border="0" cellspacing="0" cellpadding="0" style="-webkit-font-smoothing:antialiased;line-height:100%;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;mso-table-lspace:0pt;mso-table-rspace:0pt;" )
+                                include tamplate/product-card.pug
+
+                    include tamplate/footer-nav.pug
+                    
+                    include tamplate/footer.pug
