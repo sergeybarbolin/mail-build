@@ -19,49 +19,11 @@ body
                     tr
                         include blocks/header/red-banner.pug
                     tr
-                        //- Баннер с промокодом
-                            banner-code(
-                                'куда ведет кнопка с баннера',
-                                'текст промокода',
-                                'цвет плашки промокода',
-                                'цвет обводки плашки промокода',
-                                'изображение слева',
-                                'изображение сверху по центру',
-                                'изображение справа',
-                                'изображение снизу по центру'
-                            )
-                        +banner-code(
-                            'https://www.gold585.ru/',
-                            'code',
-                            '#ffffff',
-                            '#000000',
-                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_01.jpg',
-                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_02.jpg',
-                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_05.jpg',
-                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_03.jpg'
-                        )
-                    tr
-                        //-offset('отступ в px')
-                        +offset('15')
-                    tr
-                        +banner-redframe('http://www.gold585.ru/upload/subscribe/16-08-2017/18.png','http://www.gold585.ru/upload/subscribe/16-08-2017/19.png','asdasdas')
-                    tr
-                        //-offset('отступ в px')
-                        +offset('15')
-                    tr
                         //- Обычный баннер с ссылкой
                             banner('ссылка куда ведет баннер', 'ссылка на изображение баннера')
                         +banner('https://www.gold585.ru/catalog/earrings/earrings_with_colored_stones/ ', 'http://www.gold585.ru/upload/mail/31-08-2018/mail2_03.jpg')
                     tr
-                        //- Квадпратный баннер с промокодом
-                            banner('ссылка на верхнее изображение баннера', 'ссылка на нижнее изображение баннера', 'промокод')
-                        +banner-shadowframe('http://www.gold585.ru/upload/subscribe/31-08-2018/42.png', 'http://www.gold585.ru/upload/subscribe/31-08-2018/43.png', 'asdsadasd')
-                    tr
                         include blocks/product-card.pug
-                    tr
-                        //- Обычный баннер без ссылки
-                            banner('ссылка на изображение баннера')
-                        +banner-no-link('http://www.gold585.ru/upload/mail/02-08-2018/mail_3_17.jpg')
                     tr
                         //-offset('отступ в px')
                         +offset('20')
