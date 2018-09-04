@@ -3,34 +3,72 @@ html(xmlns="http://www.w3.org/1999/xhtml")
 include variables.pug
 include mixins.pug
 head
-    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
-    <!--[if !mso]><!-->
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    <!--<![endif]-->
-    title #{title}
-body(style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;width:100% !important;height:100% !important;-webkit-font-smoothing:antialiased;line-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;")
+    include blocks/header/head.pug
+    include style.pug
+body
     table(id="backgroundTable" style="-webkit-font-smoothing:antialiased;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;width:100% !important;line-height:100% !important;")
         tr
-            td(style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+            td(align="center" 11style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
                 table(class="outer" border="0" cellspacing="0" cellpadding="0" width="600" role="presentation" style="-webkit-font-smoothing:antialiased;line-height:100%;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;mso-table-lspace:0pt;mso-table-rspace:0pt;Margin:0 auto;width:600px;")
+                    tr 
+                        include blocks/header/preheader.pug
                     tr
-                        td(style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
-                            div(class="preheader" style="-webkit-font-smoothing:antialiased;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;") #{preheader}
-                    include tamplate/header.pug
-                    include tamplate/header-nav.pug
-                    
+                        include blocks/header/header--new.pug
                     tr
-                        td(align="center" valign="middle" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
-                            a(href="https://www.gold585.ru/catalog/" target="_blank" style="-webkit-font-smoothing:antialiased;line-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
-                                img(class="imageFix" width="600" height="" border="0" src="http://www.gold585.ru/upload/mail/27-07-2018/mail_03.jpg" alt="ЗАЙДИ В МАГАЗИН НЕ ВЫХОДЯ ИЗ ДОМА" style="color:#ffffff;font-family:Verdana,sans-serif!important;font-size:20px;line-height:50px;-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+                        include blocks/header/red-banner--new.pug
+                    tr
+                        include blocks/header/header-nav--new.pug
+                    tr
+                        //- Баннер с промокодом
+                            banner-code(
+                                'куда ведет кнопка с баннера',
+                                'текст промокода',
+                                'цвет плашки промокода',
+                                'цвет обводки плашки промокода',
+                                'изображение слева',
+                                'изображение сверху по центру',
+                                'изображение справа',
+                                'изображение снизу по центру'
+                            )
+                        +banner-code(
+                            'https://www.gold585.ru/',
+                            'code',
+                            '#ffffff',
+                            '#000000',
+                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_01.jpg',
+                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_02.jpg',
+                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_05.jpg',
+                            'http://www.gold585.ru/upload/mail/04-09-2018/banner-code_03.jpg'
+                        )
+                    tr
+                        //-offset('отступ в px')
+                        +offset('15')
+                    tr
+                        +banner-redframe('http://www.gold585.ru/upload/subscribe/16-08-2017/18.png','http://www.gold585.ru/upload/subscribe/16-08-2017/19.png','asdasdas')
+                    tr
+                        //-offset('отступ в px')
+                        +offset('15')
+                    tr
+                        //- Обычный баннер с ссылкой
+                            banner('ссылка куда ведет баннер', 'ссылка на изображение баннера')
+                        +banner('https://www.gold585.ru/catalog/earrings/earrings_with_colored_stones/ ', 'http://www.gold585.ru/upload/mail/31-08-2018/mail2_03.jpg')
+                    tr
+                        //- Квадпратный баннер с промокодом
+                            banner('ссылка на верхнее изображение баннера', 'ссылка на нижнее изображение баннера', 'промокод')
+                        +banner-shadowframe('http://www.gold585.ru/upload/subscribe/31-08-2018/42.png', 'http://www.gold585.ru/upload/subscribe/31-08-2018/43.png', 'asdsadasd')
+                    tr
+                        include blocks/product-card.pug
+                    tr
+                        //- Обычный баннер без ссылки
+                            banner('ссылка на изображение баннера')
+                        +banner-no-link('http://www.gold585.ru/upload/mail/02-08-2018/mail_3_17.jpg')
+                    tr
+                        //-offset('отступ в px')
+                        +offset('20')
+                    tr
+                        include blocks/footer/footer-nav--new.pug
 
-                    include tamplate/banner-top.pug
+                    include blocks/footer/footer--new.pug
 
                     tr
-                        td(width="100%" style="padding-bottom:30px;-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-right:0;padding-left:0;")
-                            table(border="0" cellspacing="0" cellpadding="0" style="-webkit-font-smoothing:antialiased;line-height:100%;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;mso-table-lspace:0pt;mso-table-rspace:0pt;" )
-                                include tamplate/product-card.pug
-
-                    include tamplate/footer-nav.pug
-                    
-                    include tamplate/footer.pug
+                        include blocks/footer/unsubscribe.pug

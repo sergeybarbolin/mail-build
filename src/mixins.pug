@@ -2,3 +2,101 @@ mixin product(href, src)
     td(align="center" width="50%" valign="top" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
         a(href=href target="_blank" style="-webkit-font-smoothing:antialiased;line-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
             img(class="imageFix" width="100%" height="" border="0" src=src alt="" style="-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+
+
+mixin banner(href, src)
+    td(colspan="2" style="padding-bottom:0px;-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-right:0;padding-left:0;")
+        a(href=href target="_blank" style="-webkit-font-smoothing:antialiased;line-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+            img(class="imageFix" width="100%" height="" border="0" src=src alt="" style="-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+
+mixin banner-no-link(src)
+    td(colspan="2" style="padding-bottom:0px;-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-right:0;padding-left:0;")
+        img(class="imageFix" width="100%" height="" border="0" src=src alt="" style="-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+
+
+mixin banner-code(button, promoCode, bgcolor, bordercolor, srcLeft, srcCenterTop, srcCenterBottom, srcRight)
+    td(colspan="2" width="100%" style="padding-bottom:0px;-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-right:0;padding-left:0;")
+        table(border="0" cellspacing="0" cellpadding="0" style="-webkit-font-smoothing:antialiased;line-height:100%;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;mso-table-lspace:0pt;mso-table-rspace:0pt;")
+            tr
+                td(align="center" height="360" width="343" valign="top" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0")
+                    img(class="imageFix" width="100%" height="360" border="0" src=srcLeft alt="" style="-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+                td(align="center" height="360" width="195" valign="top" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+                    table(border="0" cellspacing="0" cellpadding="0" style="-webkit-font-smoothing:antialiased;line-height:100%;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;mso-table-lspace:0pt;mso-table-rspace:0pt;")
+                        tr
+                            td(align="center" height="218" width="195" valign="top" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0") 
+                                img(class="imageFix" width="100%" height="218" border="0" src=srcCenterTop alt="" style="-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+                        tr
+                            td(align="center" height="40" width="195" valign="midle" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+                                table(border="1" width="100%" height="100%" bgcolor=bgcolor  bordercolor=bordercolor cellspacing="0" cellpadding="0" style="-webkit-font-smoothing:antialiased;line-height:100%;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;mso-table-lspace:0pt;mso-table-rspace:0pt;")
+                                    tr
+                                        td(align="center" height="100%" width="100%" valign="midle" bgcolor=bgcolor style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
+                                            span(class="fallback-text" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Verdana,sans-serif!important;text-transform:uppercase;text-decoration:none;display:inline-block;line-height:19px;font-size:19px;font-weight:naormal;") #{promoCode}
+                        tr
+                            td(align="center" height="102" width="195" valign="top" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0")
+                                a(href=button target="_blank" style="-webkit-font-smoothing:antialiased;line-height:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;") 
+                                    img(class="imageFix" width="100%" height="102" border="0" src=srcCenterBottom alt="" style="-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+                td(align="center" height="360" width="62" valign="top" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;") 
+                    img(class="imageFix" width="100%" height="360" border="0" src=srcRight alt="" style="-ms-interpolation-mode:bicubic;border-style:none;outline-style:none;clear:both;text-decoration:none;display:block;")
+
+mixin banner-redframe(srcLeft, srcRight, promocode)
+    td(align="left" valign="top" style="padding-top:0px;padding-right:19px;padding-bottom:0px;padding-left:19px;")
+            table(border="0" cellspacing="0" cellpadding="0" width="562px")
+                tr
+                    td(align="left" valign="top" style="border-width:5px;border-color:#ff0008;border-style:solid;padding-top:20px;padding-right:0;padding-bottom:22px;padding-left:0;")
+                        table(border="0" cellspacing="0" cellpadding="0" width="552px")
+                            tr
+                                td(align="center" valign="top" style="padding-top:0;padding-right:20px;padding-bottom:0;padding-left:20px;") 
+                                    a(href="https://www.gold585.ru/" target="_blank") 
+                                        img(class="imageFix" width="234" height="" border="0" src=srcLeft alt="")
+                                td(align="center" valign="middle" rowspan="4") 
+                                        img(class="imageFix" width="2" height="" border="0" src="http://www.gold585.ru/upload/subscribe/16-08-2017/22.png" alt="")
+                                td(align="center" valign="top" rowspan="3" style="padding-top:0;padding-right:20px;padding-bottom:0;padding-left:20px;") 
+                                    img(class="imageFix" width="235" height="" border="0" src=srcRight alt="")
+                            tr
+                                td(align="center" valign="top" style="padding-top:35px;padding-right:0;padding-bottom:8px;padding-left:0;") 
+                                    span(class="text1 fallback-text") ПРОМОКОД: 
+                            tr
+                                td(align="center" valign="top" style="padding-top:0;padding-right:0;padding-bottom:39px;padding-left:0;") 
+                                    span(class="text2 fallback-text") #{promocode}
+                            tr
+                                td(align="center" valign="top") 
+                                    a(href="https://www.gold585.ru/" target="_blank") 
+                                        img(class="imageFix" width="233" height="" border="0" src="http://www.gold585.ru/upload/subscribe/16-08-2017/20.png" alt="")
+                                td(align="center" valign="top") 
+                                    a(href="http://585gold.ru/contacts/shops/" target="_blank") 
+                                        img(class="imageFix" width="235" height="" border="0" src="http://www.gold585.ru/upload/subscribe/16-08-2017/21.png" alt="")
+
+mixin banner-shadowframe(srcTop, srcBottom, promocode)
+            td(align="left" valign="top")
+                table(border="0" cellspacing="0" cellpadding="0" width="600px")
+                  tr
+                    td(align="right" valign="middle" rowspan="3")
+                        img(style="width:100%;height:100%;" class="imageFix" width="134" height="" border="0" src="http://www.gold585.ru/upload/subscribe/27-08-2018/bl.png" alt="")
+                    td(align="center" valign="bottom")
+                        img(style="width:100%;height:100%;" class="imageFix" width="332" height="" border="0" src="http://www.gold585.ru/upload/subscribe/27-08-2018/bt.png" alt="")
+                    td(align="left" valign="middle" rowspan="3")
+                        img(style="width:100%;height:100%;" class="imageFix" width="134" height="" border="0" src="http://www.gold585.ru/upload/subscribe/27-08-2018/br.png" alt="")
+                  tr
+                    td(align="center" valign="top" style="padding-top:17px;padding-right:17px;padding-bottom:17px;padding-left:17px;")
+                      table(border="0" cellspacing="0" cellpadding="0" width="298px")
+                        tr
+                          td(align="center" valign="top" style="border-color:#e5e5e5;border-width:2px;border-style:solid;")
+                            table(border="0" cellspacing="0" cellpadding="0" width="294px")
+                              tr
+                                td(align="center" valign="top" style="padding-top:35px;padding-right:0;padding-bottom:0;padding-left:0;")
+                                    img(class="imageFix" width="223" height="" border="0" src=srcTop alt="")
+                              tr
+                                td(align="center" valign="top" style="padding-top:19px;padding-right:45px;padding-bottom:19px;padding-left:45px;")
+                                  table(border="0" cellspacing="0" cellpadding="0" width="204px")
+                                    tr
+                                      td(align="center" valign="top" width="200" bgcolor="#ebebeb" style="padding-top:7px;padding-right:0;padding-bottom:7px;padding-left:0;")
+                                        span(class="text1 fallback-text") #{promocode}
+                              tr
+                                td(align="center" valign="top" style="padding-top:0;padding-right:0;padding-bottom:31px;padding-left:0;")
+                                    img(class="imageFix" width="223" height="" border="0" src=srcBottom alt="")
+                  tr
+                    td(align="center" valign="bottom")
+                        img(style="width:100%;height:100%;" class="imageFix" width="332" height="" border="0" src="http://www.gold585.ru/upload/subscribe/27-08-2018/bb.png" alt="")
+
+mixin offset (size)
+    td(align="center" colspan="2"  width="100%" height=size valign="top" style="-webkit-font-smoothing:antialiased;line-height:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;border-spacing:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;")
