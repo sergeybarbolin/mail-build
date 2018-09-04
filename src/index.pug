@@ -13,11 +13,11 @@ body
                     tr 
                         include blocks/header/preheader.pug
                     tr
-                        include blocks/header/header--new.pug
+                        include blocks/header/header.pug
                     tr
-                        include blocks/header/red-banner--new.pug
+                        include blocks/header/header-nav.pug
                     tr
-                        include blocks/header/header-nav--new.pug
+                        include blocks/header/red-banner.pug
                     tr
                         //- Баннер с промокодом
                             banner-code(
@@ -66,9 +66,9 @@ body
                         //-offset('отступ в px')
                         +offset('20')
                     tr
-                        include blocks/footer/footer-nav--new.pug
+                        include blocks/footer/footer-nav.pug
 
-                    include blocks/footer/footer--new.pug
+                    include blocks/footer/footer.pug
 
                     tr
                         include blocks/footer/unsubscribe.pug
